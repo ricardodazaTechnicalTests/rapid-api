@@ -1,0 +1,14 @@
+services:
+  rapid-api:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: rapid-api
+    ports:
+      - "8080:8080"
+    networks:
+      - shared-net
+
+networks:
+  shared-net:
+    driver: bridge
