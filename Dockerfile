@@ -1,6 +1,3 @@
-# using multistage docker build
-# ref: https://docs.docker.com/develop/develop-images/multistage-build/
-
 # temp container to build using gradle
 FROM gradle:7.2.0-jdk8 AS TEMP_BUILD_IMAGE
 ENV APP_HOME=/usr/app/
