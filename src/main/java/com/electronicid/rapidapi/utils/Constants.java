@@ -5,7 +5,6 @@ public class Constants {
     public static final String PROCESS_IMAGES = "/processImages";
     public static final String FACES = "Faces";
     public static final String DESCRIPTION = "Description";
-    public static final String APPLICATION_JSON = "application/json";
     public static final String MICROSOFT_AZURE_API_URL = "https://microsoft-computer-vision3.p.rapidapi.com/analyze?language=en&descriptionExclude=Celebrities&visualFeatures=%s&details=Celebrities";
     public static final String CONTENT_TYPE = "content-type";
     public static final String X_RAPIDAPI_HOST = "x-rapidapi-host";

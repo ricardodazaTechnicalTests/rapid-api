@@ -41,7 +41,7 @@ public class ManageComputerVisionApiImpl implements ManageComputerVisionApi {
     @Override
     public String sendPostToRapidApi(final Image image, final String visualFeatures) {
         OkHttpClient client = new OkHttpClient();
-        MediaType mediaType = MediaType.parse(APPLICATION_JSON);
+        MediaType mediaType = MediaType.parse(org.springframework.http.MediaType.APPLICATION_JSON_VALUE);
         String responseBody = "";
         try {
         	String json = mapper.writeValueAsString(image);
@@ -49,7 +49,7 @@ public class ManageComputerVisionApiImpl implements ManageComputerVisionApi {
             Request request = new Request.Builder()
                     .url(String.format(MICROSOFT_AZURE_API_URL, visualFeatures))
                     .post(body)
-                    .addHeader(CONTENT_TYPE, APPLICATION_JSON)
+                    .addHeader(CONTENT_TYPE, org.springframework.http.MediaType.APPLICATION_JSON_VALUE)
                     .addHeader(X_RAPIDAPI_HOST, MICROSOFT_COMPUTER_VISION_HOST)
                     .addHeader(X_RAPIDAPI_KEY, RAPIDAPI_KEY)
                     .build();

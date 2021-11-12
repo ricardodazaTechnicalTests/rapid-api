@@ -2,7 +2,6 @@ package com.electronicid.rapidapi.services;
 
 import com.electronicid.rapidapi.dto.Image;
 import com.electronicid.rapidapi.dto.ImageResume;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Spy;
@@ -15,8 +14,6 @@ import static org.junit.Assert.*;
 
 @RunWith(MockitoJUnitRunner.class)
 public class ManageComputerVisionApiTest {
-
-    private static ObjectMapper mapper = new ObjectMapper();
 
     @Spy
     private ManageComputerVisionApiImpl computerVisionApi;
